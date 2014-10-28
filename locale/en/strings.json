@@ -1,0 +1,20 @@
+{
+    "respack": "home-shell-en-strings",
+    "version": "0.0.1",
+    "contents": {
+        "https-required" : "This resource needs HTTPS request",
+        "invalid-request": "Invalid request",
+        "homeshell-welcome" : "Welcome to Home Shell",
+        "hello-world" : "Hello world!",
+        "login-success" : "Logged in successfully. Session token created",
+        "login-token-failed" : "Error trying to create session token",
+        "login-required" : "You need to be logged in to access this resource",
+        "login-incorrect" : "Incorrect login information",
+        "token-valid" : "Valid session token. Session time extended",
+        "token-notfound" : "The given session token does not exist",
+        "token-timeout" : "Session token timed out",
+        "token-reset" : "All timed out tokens were erased",
+        "token-update-failed" : "Could not update session time",
+        "operation-success" : "Operation executed sucessfully"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "respack": "home-shell-pt-br-strings",
+    "version": "0.0.1",
+    "contents": {
+        "https-required" : "Este recurso necessita do uso de SSL (HTTPS)",
+        "invalid-request": "Requisição inválida",
+        "hello-world" : "Olá mundo",
+        "homeshell-welcome" : "Bem vindo ao Home Shell",
+        "login-success" : "Usuário autenticado. Token de sessão criado com sucesso",
+        "login-token-failed" : "Erro ao gerar token de acesso",
+        "login-required" : "Você precisa estar logado para acessar este recurso",
+        "login-incorrect" : "As informações de login estão incorretas",
+        "token-valid" : "Token de conexão válido. Tempo de sessão extendido",
+        "token-notfound" : "Token de conexão inexistente",
+        "token-timeout" : "Token de conexão expirou",
+        "token-reset" : "Todas as tokens de conexão vencidas foram apagadas",
+        "token-update-failed" : "Não foi possível atualizar o token de conexão",
+        "operation-success" : "A operação foi realizada com sucesso",
+        "entity-invalid-parameter" : "Aparelho não possui parâmetro especificado",
+        "appliance-not-found" : "Aparelho não encontrado",
+        "appliance-status-not-found" : "Status de aparelho não encontrado"
+    }
+}
