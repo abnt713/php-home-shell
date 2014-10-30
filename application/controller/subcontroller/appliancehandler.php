@@ -69,6 +69,7 @@ class ApplianceHandler extends HomeShellSubController {
         $json = array(
             'id' => $appliance->appliance_id,
             'type' => $appliance->type,
+            'name' => $appliance->name,
             'services' => $servicesJson,
             'status' => $statusJson
         );
