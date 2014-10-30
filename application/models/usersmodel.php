@@ -4,10 +4,11 @@ class UsersModel extends Model{
     
     public function doLogin($username, $password){
         // TODO: Check if we should avoid creating multiple tokens
-        $sql = "SELECT user_id FROM hs_users WHERE (username = :username OR email = :username) AND password = sha1(:password)";
+        $sql = "SELECT user_id FROM hs_users WHERE (username = :username OR email = :username) AND password = :password";
 //        $sql = "SELECT user_id FROM hs_users WHERE (username = '{$username}' OR email = '{$username}') AND password = sha1('{$password}')";
         $statement = $this->db->prepare($sql);
         
+        $password = sha1($password);
         $statement->bindParam(':password', $password);
         $statement->bindParam(':username', $username);
         
