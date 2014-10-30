@@ -36,8 +36,42 @@ class Appliances extends HomeShellController {
     }
 
     private function getAllAppliances() {
+        $appliancesModel = $this->loadModel('AppliancesModel');
+        
+        $appliances = $appliancesModel->getAllAppliances();
+        $json = array();
+        foreach($appliances as $appliance){
+            $applianceId = $appliance->appliance_id;
+            $services = $appliancesModel->getApplianceServices($applianceId);
+            $status = $appliancesModel->getApplianceStatus($applianceId);
+
+            $servicesJson = array();
+            foreach ($services as $service) {
+                $servicesJson[] = array(
+                    'name' => $service->service_trigger
+                );
+            }
+
+            $statusJson = array();
+            foreach ($status as $singleStatus) {
+                $statusJson[] = array(
+                    $singleStatus->status_key => $singleStatus->status_value
+                );
+            }
+            
+            $applianceJson = array(
+                'id' => $appliance->appliance_id,
+                'type' => $appliance->type,
+                'services' => $servicesJson,
+                'status' => $statusJson
+            );
+            
+            $json[] = $applianceJson;
+        }
+
         $this->setStatus(1);
-        $this->addLiteralMessage('Looking for all appliances');
+        $this->addLocalizedMessage('operation-success');
+        $this->addContent('appliances', $json);
         $this->end();
     }
 
