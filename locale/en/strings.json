@@ -4,8 +4,8 @@
     "contents": {
         "https-required" : "This resource needs HTTPS request",
         "invalid-request": "Invalid request",
-        "homeshell-welcome" : "Welcome to Home Shell",
         "hello-world" : "Hello world!",
+        "homeshell-welcome" : "Welcome to Home Shell",
         "login-success" : "Logged in successfully. Session token created",
         "login-token-failed" : "Error trying to create session token",
         "login-required" : "You need to be logged in to access this resource",
@@ -15,6 +15,10 @@
         "token-timeout" : "Session token timed out",
         "token-reset" : "All timed out tokens were erased",
         "token-update-failed" : "Could not update session time",
-        "operation-success" : "Operation executed sucessfully"
+        "operation-success" : "Operation executed sucessfully",
+        "entity-invalid-parameter" : "Appliance does not give the required parameters",
+        "appliance-not-found" : "Appliance not found",
+        "appliance-status-not-found" : "Appliance status not found",
+        "appliance-unavailable" : "Could not connect to appliance"
     }
 }

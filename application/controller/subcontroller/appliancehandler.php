@@ -51,7 +51,8 @@ class ApplianceHandler extends HomeShellSubController {
 
         $services = $this->appliancesModel->getApplianceServices($applianceId);
         $status = $this->appliancesModel->getApplianceStatus($applianceId);
-
+        
+        /*
         $servicesJson = array();
         foreach ($services as $service) {
             $servicesJson[] = array(
@@ -61,19 +62,21 @@ class ApplianceHandler extends HomeShellSubController {
 
         $statusJson = array();
         foreach ($status as $singleStatus) {
-            $statusJson[] = array(
-                $singleStatus->status_key => $singleStatus->status_value
-            );
+            $statusJson[$singleStatus->status_name] = $singleStatus->status_value;
         }
 
         $json = array(
             'id' => $appliance->appliance_id,
             'type' => $appliance->type,
-            'name' => $appliance->name,
+            'name' => $appliance->type,
             'services' => $servicesJson,
             'status' => $statusJson
         );
+        */
 
+        $applianceBuilder = new ApplianceBuilder();
+        $json = $applianceBuilder->getFullAppliance($appliance, $services, $status);
+        
         $this->setStatus(1);
         $this->addLocalizedMessage('operation-success');
         $this->addContent('appliance', $json);
@@ -87,7 +90,6 @@ class ApplianceHandler extends HomeShellSubController {
             $this->end();
         } else {
             $services = $this->appliancesModel->getApplianceServices($applianceId);
-
             $servicesJson = array();
             foreach ($services as $service) {
                 $servicesJson[] = array(

@@ -27,6 +27,7 @@ require 'application/libs/homeshell/controller/homeshellsubcontroller.php';
 require 'application/src/utils/homeshellrequest.php';
 require 'application/src/utils/urlhandler.php';
 require 'application/src/res/getter/strres.php';
+require 'application/src/jsonbuilder/appliancebuilder.php';
 
 // load global functions
 require 'application/src/global_functions.php';

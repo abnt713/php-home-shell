@@ -49,15 +49,13 @@ class Groups extends HomeShellController{
 
                 $statusJson = array();
                 foreach ($status as $singleStatus) {
-                    $statusJson[] = array(
-                        $singleStatus->status_key => $singleStatus->status_value
-                    );
+                    $statusJson[$singleStatus->status_name] = $singleStatus->status_value;
                 }
 
                 $applianceJson = array(
                     'id' => $appliance->appliance_id,
                     'type' => $appliance->type,
-                    'name' => $appliance->name,
+                    'name' => $appliance->type,
                     'services' => $servicesJson,
                     'status' => $statusJson
                 );

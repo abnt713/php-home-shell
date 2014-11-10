@@ -18,6 +18,7 @@
         "operation-success" : "A operação foi realizada com sucesso",
         "entity-invalid-parameter" : "Aparelho não possui parâmetro especificado",
         "appliance-not-found" : "Aparelho não encontrado",
-        "appliance-status-not-found" : "Status de aparelho não encontrado"
+        "appliance-status-not-found" : "Status de aparelho não encontrado",
+        "appliance-unavailable" : "Aparelho não está conectado ou não pode responder a requisições no momento"
     }
 }

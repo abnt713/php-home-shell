@@ -26,11 +26,11 @@ define('HTTPS_URL', 'http://' . SERVER_ADDR);
  * Configuration for: Database
  * This is the place where you define your database credentials, database type etc.
  */
-define('DB_TYPE', 'sqlite');
-define('DB_HOST', 'application/database/homeshell.db');
+//define('DB_TYPE', 'sqlite');
+//define('DB_HOST', 'application/database/homeshell.db');
 
-//define('DB_TYPE', 'mysql');
-//define('DB_HOST', 'localhost');
-//define('DB_NAME', 'home-shell');
-//define('DB_USER', 'app');
-//define('DB_PASS', '123456abc');
+define('DB_TYPE', 'mysql');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'home-shell');
+define('DB_USER', 'app');
+define('DB_PASS', '123456abc');

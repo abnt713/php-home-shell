@@ -19,6 +19,16 @@ class AppliancesModel extends Model{
         return $statement->fetch();
     }
     
+    public function getApplianceByKey($key){
+        $sql = "SELECT * FROM hs_appliances WHERE appliance_key = :key";
+        
+        $statement = $this->db->prepare($sql);
+        $statement->bindParam(':key', $key);
+        $statement->execute();
+        
+        return $statement->fetch();
+    }
+    
     public function getApplianceServices($applianceId){
         $sql = "SELECT * FROM hs_appliance_services WHERE appliance_id = :appliance";
         $statement = $this->db->prepare($sql);

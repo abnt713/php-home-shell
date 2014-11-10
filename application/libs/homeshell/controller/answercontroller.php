@@ -12,6 +12,7 @@ abstract class AnswerController extends Controller {
     public function __construct() {
         parent::__construct();
         $this->answer = new DefaultAnswer();
+        $this->answer->setStatus(0);
         $this->localizedAnswers = array();
     }
 
@@ -48,7 +49,7 @@ abstract class AnswerController extends Controller {
     protected function end() {
         foreach ($this->localizedAnswers as $localized) {
             $string = StrRes::get($localized);
-            $str = !is_null($string) ? $string : 'unavailable_res';
+            $str = !is_null($string) ? $string : 'unavailable_res: ' . $localized;
             
             $this->answer->addMessage($str);
         }

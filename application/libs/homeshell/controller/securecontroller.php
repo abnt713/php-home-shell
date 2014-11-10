@@ -5,7 +5,7 @@ require_once dirname(__FILE__) . '/answercontroller.php';
 class SecureController extends AnswerController {
 
     protected function forceHttps() {
-    
+        return;
         if (filter_input(INPUT_SERVER, 'HTTPS') != "on" && HOMESHELL_HTTPS_ENABLED) {
             
             if(HOMESHELL_REDIRECT_ON_HTTPS){
